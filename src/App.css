@@ -31,12 +31,32 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
+} */
 
 .card {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 2em;
 }
 
-.read-the-docs {
+.icon-background{
+  color: rgb(255, 255, 255);
+}
+
+.fa-brands {
+  margin: 0.5rem;
+  padding: 15px;
+  color: black;
+  border-radius: 50%;
+  border-color: black;
+  border-width: 1px;
+}
+
+.registerText{
+  color: gray;
+}
+
+/* .read-the-docs {
   color: #888;
-} */
+}  */

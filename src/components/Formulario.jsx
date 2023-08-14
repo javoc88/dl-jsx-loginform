@@ -40,7 +40,7 @@ const Formulario = ({setAlert}) => {
 
   return (
     <>
-    {/* Formulario con React Bootstrap */}
+      {/* Formulario con React Bootstrap */}
       <Form onSubmit={validateData}>
         <Form.Group className="mb-2" controlId="formName">
           <Form.Control
@@ -77,7 +77,11 @@ const Formulario = ({setAlert}) => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </Form.Group>
-        <Button type="submit">Registrarse</Button>
+        <div className="d-grid gap-2">
+          <Button type="submit" variant="success">
+            Registrarse
+          </Button>
+        </div>
       </Form>
 
       {/* formulario sin React Bootstrap */}
