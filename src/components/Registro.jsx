@@ -4,8 +4,7 @@ import Card from "react-bootstrap/Card";
 import Formulario from "./Formulario";
 import SocialButton from "./SocialButton";
 
-const Registro = () => {
-  const [alert, setAlert] = useState({msg: "", color: ""})
+const Registro = ({alert, setAlert}) => {
   return (
     <>
       <Card style={{ width: "25rem" }}>
