@@ -9,25 +9,26 @@ const Formulario = ({setAlert}) => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const validateData = (e) => {
    e.preventDefault()
-    if (password != confirmPassword) {
+   if (
+    name === "" ||
+    email === "" ||
+    password === "" ||
+    confirmPassword === ""
+  ) {
+    setAlert({
+      msg: "Completar todos los campos",
+      color: "warning",
+    });
+    return;
+  }
+   if (password != confirmPassword) {
       setAlert({
         msg: "Contraseñas no coinciden",
         color: "danger",
       });
       return;
     }
-    if (
-      name === "" ||
-      email === "" ||
-      password === "" ||
-      confirmPassword === ""
-    ) {
-      setAlert({
-        msg: "Completar todos los campos",
-        color: "warning",
-      });
-      return;
-    }
+   
 
     setAlert({
       msg: "Cuenta creada exitosamente",
