@@ -5,7 +5,9 @@ import SocialButton from "./SocialButton";
 const Registro = () => {
   return (
     <>
-      <SocialButton />
+      <SocialButton icon="fa-brands fa-facebook" />
+      <SocialButton icon="fa-brands fa-github" />
+      <SocialButton icon="fa-brands fa-linkedin" />
       <Formulario />
       <Alert/>
     </>
