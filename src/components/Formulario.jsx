@@ -2,33 +2,38 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-const Formulario = () => {
+const Formulario = ({setAlert}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const validateData = () => {
-    if (password != confirmPassword) {
-      //componente Alert - "Contraseñas no coinciden"
-      // test
-      alert("Contraseñas no coinciden");
+  const validateData = (e) => {
+   e.preventDefault()
+   if (
+    name === "" ||
+    email === "" ||
+    password === "" ||
+    confirmPassword === ""
+  ) {
+    setAlert({
+      msg: "Completar todos los campos",
+      color: "warning",
+    });
+    return;
+  }
+   if (password != confirmPassword) {
+      setAlert({
+        msg: "Contraseñas no coinciden",
+        color: "danger",
+      });
       return;
     }
-    if (
-      name === "" ||
-      email === "" ||
-      password === "" ||
-      confirmPassword === ""
-    ) {
-      //componente Alert - "Completar todos los campos"
-      // test
-      alert("Completar todos los campos");
-      return;
-    }
+   
 
-    // componente Alert - "Cuenta creada exitosamente"
-    // test
-    alert("Cuenta creada exitosamente");
+    setAlert({
+      msg: "Cuenta creada exitosamente",
+      color: "success",
+    });
     setName("");
     setEmail("");
     setPassword("");
