@@ -7,7 +7,8 @@ const Formulario = ({setAlert}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const validateData = () => {
+  const validateData = (e) => {
+   e.preventDefault()
     if (password != confirmPassword) {
       setAlert({
         msg: "Contraseñas no coinciden",
