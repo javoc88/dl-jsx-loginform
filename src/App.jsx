@@ -5,7 +5,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Registro from "./components/Registro";
 
 function App() {
-  return <Registro />;
+  return (
+    <>
+      <div className="container">
+        <Registro />
+      </div>
+    </>
+  );
 }
 
 export default App;

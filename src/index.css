@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -67,3 +74,19 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+body {
+  background: rgb(249, 255, 152);
+  background: radial-gradient(
+    circle,
+    rgba(249, 255, 152, 1) 0%,
+    rgba(125, 254, 148, 1) 100%
+  );
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 4rem;
+}
