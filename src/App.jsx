@@ -5,7 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Registro from "./components/Registro";
 
 function App() {
-  return <Registro />;
+  const [alert, setAlert] = useState({msg: "", color: ""})
+  return <Registro setAlert = {setAlert} />;
 }
 
 export default App;
